@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>h5新表单特性</title>
+	</head>
+	<body>
+		<form action="#" method="GET" id="form1">
+			电话:<input type="tel" name="tel"/><br />
+			颜色:<input type="color" name="color"><br />
+			邮箱:<input type="email" name="email" placeholder="请输入邮箱"/><br />
+			网址:<input type="url" name="url"/><br />
+			年龄:<input type="number" name="age" 
+			value="10" min="0" max="150" step="5" /><br />
+			温度:<input type="range" name="wd" min="-50" max="50" value="0"/><br />
+			出生日期：<input type="date" name="brithday" autofocus/><br />
+			搜索：<input type="search" name="search" /><br />
+			可以自己输入的下拉列表：
+			<input type="text" list="url_list" name="link" />
+			<datalist id="url_list">
+				<option label="河南" value="1" />
+				<option label="河北" value="2" />
+				<option label="山东" value="3" />
+				<option label="陕西" value="4" />
+				<option label="山西" value="5" />
+			</datalist><br>
+			定义隐藏的输入字段:不会在页面中显示,但是提交数据时会一起提交
+			<input type="hidden" name="id" value="314892348923748923423"/>
+			<input type="image" src="img/a1.jpg" alt="自动提交" height="50px" width="200px"/>
+			<input type="submit" value="提交"/>
+		</form>
+		<input type="text" name="asd" form="form1" required/>
+		
+		autofocus:自动聚焦
+		form:关联外部的输入框
+		placeholder:输入的提示
+		required:不能为空
+		height 和 width 属性规定用于 image 类型的 input 标签的图像高度和宽度。
+	</body>
+</html>

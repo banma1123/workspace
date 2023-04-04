@@ -1,0 +1,36 @@
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.game-board {
+  width: 200px;
+  height: 400px;
+  border: 2px solid #333;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.score {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<h1>表单</h1>
+		<!-- 
+		form:所有需要提交给服务器的数据,都需要写在form中
+		action:把数据发送给指定的服务器 
+		method:数据提交的方式
+		get:url可见,数据不安全,传输的数据有大小限制
+		post:url不可见,数据安全,理论上没有大小限制
+		-->
+		
+		<form action="a.html" method="post" enctype="multipart/form-data">
+			<!-- text:文本  name属性:区分数据,必须要有 
+				text文本框 password密码框
+			-->
+			帐号:<input type="text" name="account" size="10" maxlength="3"/><br />
+			密码:<input type="password" name="pwd" disabled/><br />
+			<!-- value默认值 两个(多个)选项的name值必须一致 
+				checked默认选中
+			-->
+			性别:<input type="radio" value="男" name="sex" />男
+				 <input type="radio" value="女" name="sex" checked/>女<br />
+			爱好:<input type="checkbox" value="唱" name="hobby"/>唱
+			<input type="checkbox" value="跳" name="hobby"/>跳
+			<input type="checkbox" value="rap" name="hobby"  checked/>rap
+			<input type="checkbox" value="篮球" name="hobby"  checked/>篮球<br />
+			籍贯:
+			<select name="address"> 
+			<!-- 下拉列表  selected 默认选中 
+			如果有value 会提交value没有value提交option中间的值
+			-->
+				<option value="1">北京市</option>
+				<option>河北省</option>
+				<option selected>河南省</option>
+				<option>山东省</option>
+				<option>山西省</option>
+			</select><br />
+			<!-- 特别注意事项:有文件上传时,必须使用post提交 
+			需要在form中添加:enctype="multipart/form-data"
+			告诉浏览器,现在提交的是文件
+			-->
+			照片:<input type="file" name="photo"/><br>
+			
+			
+			简介:<br />  <!-- 多行文本域 -->
+			<textarea name="jj" cols="130" rows="10">这是个人简介</textarea>
+				 
+				 
+				 
+			<br>
+			<!-- 提交按钮  value:提交按钮的值-->
+			<input type="submit" value="登录"/>
+			<input type="reset" value="重置"/>
+			<hr />
+			<!-- 普通按钮,无法提交 -->
+			<input type="button" value="按钮"/>
+			<!-- 普通按钮,可以提交 -->
+			<button disabled>按钮</button>
+		</form>
+	</body>
+</html>

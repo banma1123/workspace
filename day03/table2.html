@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>使用表格布局实现页面样式</title>
+	</head>
+	<body>
+		<form action="#" method="POST">
+			<table border="1" style="height: 600px;width: 100%;">
+				<tr>
+					<!-- 合并第一行 -->
+					<th colspan="6" style="background-color: antiquewhite;height: 50px;">
+						<h2>管理员登录</h2>
+					</th>
+				</tr>
+				<tr style="height: 100px;">
+					<!-- 合并第一列 -->
+					<td rowspan="4" style="background-color: beige;width: 200px;"></td>
+					<td style="width: 200px;"></td>
+					<td style="width: 50px;">
+						用户名:
+					</td>
+					<td style="width: 200px;">
+						<input type="text" name="username"/>
+					</td>
+					<td style="width: 200px;"></td>
+					<td  rowspan="4"  style="background-color: beige;width: 200px;"></td>
+				</tr>
+				<tr style="height: 100px;">
+					<td></td>
+					<td>
+						密码:
+					</td>
+					<td>
+						<input type="password" name="pwd"/>
+					</td>
+					<td></td>
+					
+				</tr>
+				<tr style="height: 100px;">
+					<td></td>
+					<td>
+						<input type="reset" value="重置"/>
+					</td>
+					<td>
+						<input type="submit" value="登录"/>
+					</td>
+					<td></td>
+					
+					
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+					
+				</tr>
+				<tr>
+					<!-- 合并最后一行 -->
+					<td colspan="6" style="background-color: antiquewhite;"></td>
+				</tr>
+			</table>
+			
+		</form>
+	</body>
+</html>

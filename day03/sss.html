@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>猜数字游戏</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-top: 50px;
+      }
+
+      p {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+
+      input {
+        font-size: 24px;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f2f2f2;
+      }
+
+      button {
+        font-size: 24px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>猜数字游戏</h1>
+    <p>我已经想好了一个数字，请你猜一下是多少：</p>
+    <input type="number" id="guess" min="1" max="100">
+    <button onclick="checkGuess()">猜一下</button>
+    <p id="result"></p>
+    <script>
+      var answer = Math.floor(Math.random() * 100) + 1;
+      var count = 0;
+
+      function checkGuess() {
+        var guess = parseInt(document.getElementById("guess").value);
+        count++;
+
+        if (guess > answer) {
+          document.getElementById("result").innerHTML = "你猜的数字太大了，请猜小一点。";
+        } else if (guess < answer) {
+          document.getElementById("result").innerHTML = "你猜的数字太小了，请猜大一点。";
+        } else {
+          document.getElementById("result").innerHTML = "恭喜你，猜中了答案！你总共猜了 " + count + " 次。";
+        }
+      }
+    </script>
+  </body>
+</html>

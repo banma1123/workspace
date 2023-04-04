@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表格</title>
+	</head>
+	<body>
+		<h1>表格</h1>
+		<!-- tr:行  td:单元格 
+			border:边框
+			设置整体的高和宽
+			style="height: 400px;width: 1000px;"
+		-->
+		<table border="1" style="height: 400px;width: 1000px;">
+			<tr>
+				<td>序号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>性别</td>
+				<td>爱好</td>
+				<td>备注</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	<!-- tr:可以设置高度,但是无法设置宽度
+		td:设置宽度
+		高度相冲突,会选最高值
+		同一行,高度一致,同一列,宽度一致
+		th:居中加粗,一般用在第一行
+	 -->
+	<table border="1" style="background-color: aqua;">
+		<tr style="height: 50px;">
+			<th style="height: 90px;width: 150px;">序号</th>
+			<th style="width: 150px;">姓名</th>
+			<th style="width: 150px;">年龄</th>
+			<th style="width: 150px;">性别</th>
+			<th style="width: 150px;">爱好</th>
+			<th style="width: 150px;">备注</th>
+		</tr>
+		
+		<tr>
+			<td>a</td>
+			<td>b</td>
+			<td>c</td>
+			<td>d</td>
+			<td>e</td>
+			<td>f</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<hr />
+	<!--  -->
+	<table border="1" style="background-color:yellowgreen;height: 200px;width: 400px;">
+		<tr style="height: 50px;">
+			<th >序号</th>
+			<th >姓名</th>
+			<th >年龄</th>
+			<th >性别</th>
+			<th >爱好</th>
+			<th >备注</th>
+		</tr>
+		
+		<tr>
+			<!-- 跨列合并,需要删除对应的单元格 -->
+			<td colspan="2">ab</td>
+			<td>c</td>
+			<td>d</td>
+			<td>e</td>
+			<td>f</td>
+		</tr>
+		<tr>
+			<!-- 跨行合并也需要删除对应的单元格 -->
+			<td rowspan="2">2</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			
+			<td></td>
+			<td></td>
+			<td></td>
+			<td colspan="2" rowspan="2"></td>
+			
+		</tr>
+		<tr>
+			<td>4</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			
+		</tr>
+	</table>
+	</body>
+</html>
